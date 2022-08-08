@@ -5,7 +5,12 @@ function Product({id, name, category, price, img, products, carrinho, setCarrinh
     function HandleClick(ide){
         let find = products.find((elem) => elem.id === ide)
 
-        setCarrinho([...carrinho, find])
+        if(carrinho.includes(find)){
+
+        }
+        else{
+            setCarrinho([...carrinho, find])
+        }
 
         
         }

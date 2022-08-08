@@ -11,7 +11,7 @@ function CartTotal({carrinho, setCarrinho}){
                     return elem.price
                 }).reduce((acumulador, valorAtual) => {
                     return acumulador + valorAtual
-                },0)}</p>
+                },0).toFixed(2)}</p>
             </div>
             <button onClick={() => setCarrinho([])}>Remover Todos</button>
         </Valor>

@@ -13,7 +13,7 @@ function ProductList({products, carrinho, setCarrinho, search}){
 
     function showFilteredProducts(){
          return products.filter(({name, category, price}) => {
-            return name.includes(search) || category.includes(search) || price.toString().includes(search)
+            return name.toLowerCase().includes(search) || category.toLowerCase().includes(search) || price.toString().includes(search)
         }).map(({id, name, category, price, img}) => {
             return <Product key={id} name={name} category={category} price={price} img={img} products={products} id={id} carrinho={carrinho} setCarrinho={setCarrinho}></Product>
          })

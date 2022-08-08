@@ -13,7 +13,7 @@ function Header({setSearch}){
             </div>
             <div className="pesquisa">
                 <input type='text' value={input} onChange={(event) => {setInput(event.target.value)}}></input>
-                <button onClick={() => setSearch(input)}>Pesquisar</button>
+                <button onClick={() => setSearch(input.toLowerCase())}>Pesquisar</button>
             </div>
         </Headers>
     )
